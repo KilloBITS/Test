@@ -1,0 +1,597 @@
+@font-face {
+  font-family: custom; /* Имя шрифта */
+  src: url(./17967.otf); /* Путь к файлу со шрифтом */
+}
+
+body{
+	background-color: white;
+	margin: auto;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	cursor: url(./cursor.svg), default;
+}
+
+.prelaoder{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 9999;
+}
+
+.loader {
+	height: 20px;
+	width: 250px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.loader--dot {
+	animation-name: loader;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    height: 15px;
+    width: 15px;
+    border-radius: 150px;
+    background-color: black;
+    position: absolute;
+    border: 3px solid rgba(226, 16, 68, 0.4);
+}
+
+.loader--text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 4rem;
+    margin: auto;
+    color: white;
+}
+.loader--text:after {
+	content: "Loading";
+    font-weight: bold;
+    animation-name: loading-text;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-family: custom;
+    color: #000;
+    text-transform: uppercase;
+}
+
+@keyframes loader {
+  15% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(230px);
+  }
+  65% {
+    transform: translateX(230px);
+  }
+  95% {
+    transform: translateX(0);
+  }
+}
+@keyframes loading-text {
+  0% {
+    content: "Loading";
+  }
+  25% {
+    content: "Loading.";
+  }
+  50% {
+    content: "Loading..";
+  }
+  75% {
+    content: "Loading...";
+  }
+}
+
+
+#root,.block{
+cursor: url(./cursor.svg), default;
+}
+
+.left{
+	left: 0px;
+}
+
+.top{
+	top: 0px;
+}
+
+.vertical{
+	transform: rotate(-90deg);
+}
+
+.relative{
+	position: relative;
+}
+
+.absolute{
+	position: absolute;
+}
+
+.horisontalCenter{
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+/** Scroll bars **/
+.content::-webkit-scrollbar-track
+{
+  background-color: #ffffff;
+  border-left: 1px solid #c3c3c3;
+}
+
+.content::-webkit-scrollbar{
+  width: 6px;
+  background-color: #000000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.content::-webkit-scrollbar-thumb{
+	background-color: #262626;
+	border-radius: 0;
+	cursor: pointer;
+}
+
+
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    left: 0;
+    top: 0;
+}
+
+/** Menu **/
+.menu{
+	position: fixed;
+    right: 0px;
+    top: 0;
+    height: 100%;
+    z-index: 100;
+    transition: .3s;
+}
+
+.menuButton{
+	width: 90px;
+    height: 100%;
+    background-color: #e21044;
+    background-repeat-x: no-repeat;
+    background-position: left;
+    box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    display: inline-flex;
+    cursor: pointer;
+    float: right;
+    transition: .3s;
+    position: relative;
+    z-index: 1;
+}
+
+.menuButton.opened{
+	background-color: #020023;
+}
+
+.menu_logo{
+    vertical-align: middle;
+    display: flex;
+    margin: auto;
+}
+
+.menuBlock{
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(-12deg, #36275f, #e11044);
+    right: 90px;
+    transition: .3s;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.menuBlock.show{
+    width: calc(100% - 90px);
+}
+
+.sessin_buttons{
+	position: fixed;
+    top: 100px;
+    right: 80px;
+    font-size: 20px;
+    color: #949494;
+}
+
+.button{
+    display: inline;
+    font-family: custom;
+    margin: 0 15px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #d0d0d0;
+    transition: .3s;
+}
+
+.button:hover{
+	color: #fdfdfd;
+}
+
+.button.darkHover:hover{
+    color: #545454;
+}
+
+/** Block **/
+.block{
+	float: left;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+/** Main **/
+.block.main{
+	display: inline-flex;
+}
+
+.logotype{
+	position: fixed;
+	padding: 20px;
+}
+
+.centerBlock{
+    margin: auto;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 1080px;
+    max-height: 800px;
+    position: relative;
+}
+
+.centerBlock_data{
+    display: inline-block;
+    width: calc(50%);
+    font-family: custom;
+}
+
+.centerBlock_title{
+    font-size: 4em;
+    font-family: custom;
+    letter-spacing: -3px;
+    font-weight: bold;
+    color: #3e3e3e;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.centerBlock_text{
+	font-size: 1.6em;
+	color: silver;
+    cursor: default;
+}
+
+.logotype_block{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.ajax{
+    filter: opacity(0.3);
+    margin-bottom: -150px;
+    transition: .3s;
+}
+
+.isLoaded .ajax{
+	margin-bottom: 0px;
+}
+
+.shape{
+	position: absolute;
+    left: calc(50% - 10px);
+    transform: translate(-50%,0);
+}
+
+.crosses{
+	position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-50%, 0);
+    width: 150px;
+}
+
+.cross{
+    display: inline-block;
+    margin: 8px;
+    opacity: 1;
+}
+
+#cross_0{
+	animation: blink 10s infinite;
+}
+
+#cross_1{
+	animation: blink 5s infinite;
+}
+
+#cross_2{
+	animation: blink 7s infinite;
+}
+
+#cross_3{
+	animation: blink 13s infinite;
+}
+
+#cross_4{
+	animation: blink 12s infinite;
+}
+
+#cross_5{
+	animation: blink 14s infinite;
+}
+
+#cross_6{
+	animation: blink 6.5s infinite;
+}
+
+#cross_7{
+	animation: blink 8s infinite;
+}
+
+#cross_8{
+	animation: blink 10s infinite;
+}
+
+@keyframes blink {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.icon_block{
+	position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/** scroll arrow **/
+.scrollArrow {
+	bottom: 100px;
+}
+
+/** Share button **/
+.share_buttons{
+	position: fixed;
+    bottom: 100px;
+    left: -5px;
+    font-size: 20px;
+    color: #949494;
+}
+
+/** **/
+.big_X{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: -150px;
+    filter: contrast(0) opacity(0.5);
+}
+
+.vertical_line{
+    position: absolute;
+    width: 2px;
+    height: 10%;
+    background-color: #e91448;
+    left: calc(50% - 10px);
+    top: calc(100% - 250px);
+    transform: translate(-50%, 0);
+    transition: 3.5s;
+}
+
+.isLoaded .vertical_line{
+    height: 100%;
+}
+
+.verical_line_end{
+    position: absolute;
+    left: 50%;
+    transform: translate(10px, 0);
+    top: 100%;
+}
+
+.block.mobile{
+    display: inline-flex;
+    background-image: url(../data/images/Ajax blurred cross.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 500px;
+}
+
+.phone_block{
+    position: absolute;
+    top: -50%;
+}
+
+.appStore{
+    max-width: 160px;
+    margin: 10px 0;
+    float: left;
+    margin-left: -12px;
+}
+
+/** Open menu **/
+.menu_top{
+	width: 100%;
+	display: inline-block;
+	float: left;
+}
+
+.menu_center{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.menu_footer{
+	width: 100%;
+	display: inline-block;
+	float: left;
+}
+
+.block_menu_link{
+    float: right;
+    width: 320px;
+    margin-right: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.menu_link{
+    float: right;
+    display: inline-block;
+    font-size: 30px;
+    width: 100%;
+    text-align: right;
+    color: #d0d0d0;
+    text-transform: uppercase;
+    font-family: custom;
+	cursor: pointer;
+	transition: .3s;
+	margin: 10px 0;
+	position: relative;
+}
+
+.menu_link:hover{
+	color: #fdfdfd;
+    padding-right: 15px;
+}
+
+.menu_link::after{
+    content: "";
+    width: 0px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    right: -13px;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: .3s;
+}
+
+.menu_link:hover::after{
+    width: 12px;
+}
+
+.menu_footer{
+    display: inline-block;
+    float: left;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.footer_title{
+    display: inline-block;
+    font-size: 30px;
+    width: 100%;
+    text-align: right;
+    color: #d0d0d0;
+    text-transform: uppercase;
+    font-family: custom;
+    cursor: pointer;
+    transition: .3s;
+    margin: 10px 0;
+    position: absolute;
+    bottom: 100%;
+    right: 80px;
+}
+
+.footer_line{
+    width: calc(100% - 300px);
+    height: 1px;
+    background-color: rgba(208, 208, 208, 0.28);
+    float: right;
+    margin: 0 0 100px 0;
+    position: relative;
+}
+
+.footer_line .tripple_cross{
+    position: absolute;
+    right: 100%;
+    bottom: -16px;
+    opacity: 0.3;
+}
+
+.footer_socials{
+    position: absolute;
+    right: 70px;
+    top: 30px;
+}
+
+.social_btn{
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    opacity: .7;
+    transition: .3s;
+}
+
+.social_btn:hover{
+	opacity: 1;
+}
+
+.footer_left_nav{
+    position: absolute;
+    top: 46px;
+    right: calc(100% - 95px);
+    font-size: 18px;
+}
+
+.footer_left_nav.button{
+
+}
+
+.menu_center_back{
+
+}
+
+.back_block{
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.back_block .menu_ajax{
+    max-width: 452px;
+    opacity: 0.1;
+    filter: brightness(80%);
+}
+
+.back_block .menu_shape{
+    position: absolute;
+    left: 39px;
+    transform: rotateY(180deg);
+    filter: brightness(15%) invert(1);
+    opacity: 0.2;
+}
+
+.krest_menu{
+    position: absolute;
+    right: -90px;
+    top: -40px;
+}

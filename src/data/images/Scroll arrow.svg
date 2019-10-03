@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="24px" viewBox="0 0 12 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Scroll arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AJAX-home" transform="translate(-714.000000, -657.000000)">
+            <g id="Scroll-arrow" transform="translate(714.000000, 657.000000)">
+                <path d="M0.70498672,12.2919395 L6,22.881966 L11.2950133,12.2919395 L6,10.5258578 L0.70498672,12.2919395 Z" id="Path-2" stroke="#E21044"></path>
+                <g id="Group-11" fill="#E21044">
+                    <path d="M-5,11 L5,11 C5.55228475,11 6,11.4477153 6,12 C6,12.5522847 5.55228475,13 5,13 L-5,13 C-5.55228475,13 -6,12.5522847 -6,12 C-6,11.4477153 -5.55228475,11 -5,11 Z M18,12 L6,18 L8,12 L6,6 L18,12 Z" id="Combined-Shape" transform="translate(6.000000, 12.000000) rotate(-270.000000) translate(-6.000000, -12.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
